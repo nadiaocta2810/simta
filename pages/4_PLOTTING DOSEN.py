@@ -27,7 +27,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # --- Load data skripsi ---
-df = pd.read_excel("database\Skripsi Genap 24-25.xlsx", sheet_name=0)
+df = pd.read_excel("database/Skripsi Genap 24-25.xlsx", sheet_name=0)
 
 df.drop(index=[0, 1, 2], inplace=True)
 df.reset_index(drop=True, inplace=True)
@@ -70,7 +70,7 @@ with tab2:
         use_container_width=True
     )
 
-df_dosen_map = pd.read_excel("database\Skripsi Genap 24-25.xlsx", sheet_name="DAFTAR DOSEN", usecols="A:B")
+df_dosen_map = pd.read_excel("database/Skripsi Genap 24-25.xlsx", sheet_name="DAFTAR DOSEN", usecols="A:B")
 kode_to_nama = dict(zip(df_dosen_map["Kode Dosen"], df_dosen_map["Nama Dosen"]))
 with tab3:
     st.subheader("Daftar Mahasiswa Per Dosen")
