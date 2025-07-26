@@ -61,11 +61,5 @@ for tab, name, nama in zip(tabs, table_names, nama_tabel):
 
 
 
-        # (Opsional) Filter
-        with st.expander("🔍 Filter"):
-            if "angkatan" in df.columns:
-                angkatan = st.multiselect("Pilih Angkatan", df["angkatan"].unique())
-                if angkatan:
-                    df = df[df["angkatan"].isin(angkatan)]
-                    st.dataframe(df.reset_index(drop=True), use_container_width=True)
+
 
