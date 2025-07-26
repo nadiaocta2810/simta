@@ -27,7 +27,7 @@ st.markdown(
 )
 
 # Koneksi ke database
-engine = create_engine("sqlite:///database\data_mahasiswa2.db")
+engine = create_engine("sqlite:///database/data_mahasiswa2.db")
 
 # Fungsi untuk ambil nama-nama tabel (sheet)
 def get_table_names():

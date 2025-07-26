@@ -56,11 +56,11 @@ def login():
         submit = st.form_submit_button("Login")
 
         if submit:
-            if username == "admin" and password == "admin":
+            if username == "tiub" and password == "6767":
                 st.session_state.logged_in = True
                 save_login_state(True)
                 st.success("Berhasil login!")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("Username atau password salah!")
 
@@ -129,7 +129,7 @@ def dashboard():
             st.session_state.logged_in = False
             save_login_state(False)
             st.success("Berhasil logout.")
-            st.experimental_rerun()
+            st.rerun()
 
     df = load_data()
     df["Tahun"] = df["Tahun"].astype(str)

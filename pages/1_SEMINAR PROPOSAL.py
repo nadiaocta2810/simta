@@ -7,7 +7,7 @@ from sqlalchemy import create_engine, text
 # logout_button() # Optional, munculkan tombol logout
 
 # Koneksi ke database
-engine = create_engine("sqlite:///database\data_mahasiswa1.db")
+engine = create_engine("sqlite:///database/data_mahasiswa1.db")
 
 # Fungsi untuk ambil nama-nama tabel (sheet)
 def get_table_names():
